@@ -7,4 +7,5 @@ export function wrapPageElement({ props, element }) {
 
 export function wrapRootElement({ element }) {
   return <div>{element}</div>;
+
 }
