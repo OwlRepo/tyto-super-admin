@@ -11,6 +11,7 @@ export function wrapPageElement({ props, elements }) {
   return (
     <div {...props}>
       <Seo title={"TYTO | " + pathname} description={description} />
+
       {elements}
     </div>
   );
