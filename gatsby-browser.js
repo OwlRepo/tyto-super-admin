@@ -8,6 +8,7 @@ export function wrapPageElement({ props, element }) {
   pathname = pathname[0] == "/" ? pathname.substr(1) : pathname;
   var description =
     "Welcome to Tyto Super Admin! A page where only you as the owner has an access.";
+
   return (
     <div {...props}>
       <Seo title={"TYTO | " + pathname} description={description}>
