@@ -1,7 +1,6 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import Seo from "./src/constants/Seo";
-export function wrapPageElement({ props, element }) {
+export function wrapPageElement({ props, elements }) {
   var pathname = window.location.pathname
     .toLocaleUpperCase()
     .replace(/\/+$/, "");
@@ -12,12 +11,12 @@ export function wrapPageElement({ props, element }) {
   return (
     <div {...props}>
       <Seo title={"TYTO | " + pathname} description={description}>
-        {element}
+        {elements}
       </Seo>
     </div>
   );
 }
 
-export function wrapRootElement({ element }) {
-  return <div>{element}</div>;
+export function wrapRootElement({ elements }) {
+  return <div>{elements}</div>;
 }
