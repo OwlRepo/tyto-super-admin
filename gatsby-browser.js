@@ -1,6 +1,6 @@
 import React from "react";
 import Seo from "./src/constants/Seo";
-export function wrapPageElement({ props, elements }) {
+export function wrapPageElement({ props, element }) {
   var pathname = window.location.pathname
     .toLocaleUpperCase()
     .replace(/\/+$/, "");
@@ -12,11 +12,11 @@ export function wrapPageElement({ props, elements }) {
     <div {...props}>
       <Seo title={"TYTO | " + pathname} description={description} />
 
-      {elements}
+      {element}
     </div>
   );
 }
 
-export function wrapRootElement({ elements }) {
-  return <div>{elements}</div>;
+export function wrapRootElement({ element }) {
+  return <div>{element}</div>;
 }
